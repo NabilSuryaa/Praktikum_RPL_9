@@ -1,9 +1,13 @@
-# PrediksiKu — Sistem Prediksi Kelulusan Mahasiswa
+<img width="1568" height="746" alt="image" src="https://github.com/user-attachments/assets/b3fe98bf-6b92-47ab-8810-ed29de3bca96" /># PrediksiKu — Sistem Prediksi Kelulusan Mahasiswa
 
 Praktikum Rekayasa Perangkat Lunak (SSD1030) — **Pertemuan 9**
 Perancangan Arsitektur, Mockup, dan Implementasi Standar Pengkodean (**Clean Code & SOLID**).
 
 Aplikasi web sederhana untuk memprediksi kelulusan mahasiswa berdasarkan IPK dan total SKS, lalu menyimpan hasilnya ke database lokal dan menampilkannya sebagai riwayat.
+
+<img width="1568" height="746" alt="image" src="https://github.com/user-attachments/assets/9f65c715-98ed-4d18-94ad-ed2cfdcdce0c" />
+<img width="1568" height="744" alt="image" src="https://github.com/user-attachments/assets/3dce3eb4-f174-4b6b-ad89-6f2af863c826" />
+<img width="1568" height="745" alt="image" src="https://github.com/user-attachments/assets/6fc62660-6662-45b8-b358-aada947802c3" />
 
 ## Fitur
 
