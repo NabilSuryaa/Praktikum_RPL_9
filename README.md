@@ -1,5 +1,3 @@
-<img width="1568" height="746" alt="image" src="https://github.com/user-attachments/assets/b3fe98bf-6b92-47ab-8810-ed29de3bca96" /># PrediksiKu — Sistem Prediksi Kelulusan Mahasiswa
-
 Praktikum Rekayasa Perangkat Lunak (SSD1030) — **Pertemuan 9**
 Perancangan Arsitektur, Mockup, dan Implementasi Standar Pengkodean (**Clean Code & SOLID**).
 
