@@ -1,0 +1,18 @@
+CARA MENJALANKAN (3 langkah)
+
+1. Buka folder ini di VS Code (File > Open Folder), lalu buka terminal (Ctrl + `).
+2. Install library:
+      pip install -r requirements.txt
+3. Jalankan aplikasi:
+      streamlit run app.py
+
+Browser akan terbuka otomatis. Isi form lalu klik "Prediksi & Simpan".
+
+STRUKTUR (Layered Architecture / SOLID - SRP)
+  app.py                       View Layer       : Streamlit, merangkai semua layer
+  views/components.py          View Layer       : potongan HTML tampilan (desain Figma)
+  services/service.py          Service Layer    : aturan kelulusan (IPK >= 3.0 dan SKS >= 140)
+  repositories/repository.py   Repository Layer : simpan/ambil data (SQLAlchemy)
+  models/model.py              Model Layer      : struktur tabel database
+  styles/style.css             Gaya tampilan putih-biru sesuai mockup Figma
+  .streamlit/config.toml       Tema Streamlit

@@ -1,0 +1,122 @@
+/* Tampilan putih-biru mengikuti mockup Figma "Sistem Prediksi Kelulusan" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+html, body, .stApp, [class*="css"] { font-family: 'Inter', sans-serif; }
+
+.stApp {
+    background:
+        radial-gradient(520px 420px at 8% 4%, rgba(96,165,250,.35), transparent 70%),
+        radial-gradient(480px 380px at 40% 0%, rgba(196,181,253,.28), transparent 70%),
+        radial-gradient(520px 520px at 92% 92%, rgba(147,197,253,.45), transparent 70%),
+        #F5F9FF;
+}
+header[data-testid="stHeader"] { background: transparent; }
+#MainMenu, footer { visibility: hidden; }
+.block-container { max-width: 1120px; padding-top: 1.6rem; animation: naik .6s ease; }
+@keyframes naik { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Navbar */
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #0B2A5B; font-size: .95rem; padding-top: 6px; }
+.brand-dot { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg,#2563EB,#60A5FA); display: inline-block; }
+div[data-testid="stRadio"] { display: flex; justify-content: flex-end; }
+div[data-testid="stRadio"] [role="radiogroup"] {
+    background: #fff; border: 1px solid #D6E4FB; border-radius: 999px; padding: 4px; gap: 2px;
+    box-shadow: 0 4px 14px rgba(37,99,235,.08);
+}
+div[data-testid="stRadio"] label { padding: 4px 16px; border-radius: 999px; margin: 0; cursor: pointer; }
+div[data-testid="stRadio"] label > div:first-child { display: none; }
+div[data-testid="stRadio"] label p { font-size: .78rem; color: #0B2A5B; font-weight: 500; }
+div[data-testid="stRadio"] label:has(input:checked) { background: #2563EB; }
+div[data-testid="stRadio"] label:has(input:checked) p { color: #fff; }
+
+/* Hero */
+.chip { display: inline-block; background: #fff; border: 1px solid #D6E4FB; color: #2563EB; font-size: .7rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; margin-top: 28px; }
+.hero-title { color: #0B2A5B; font-weight: 800; font-size: 2.4rem; letter-spacing: -.02em; line-height: 1.15; margin: 14px 0 8px; padding: 0; }
+.hero-desc { color: #5B6F92; font-size: .88rem; margin-bottom: 22px; max-width: 420px; }
+
+/* Kartu umum */
+.card, [data-testid="stForm"] {
+    background: rgba(255,255,255,.92); border: 1px solid #E1ECFC; border-radius: 18px;
+    padding: 20px 22px; box-shadow: 0 14px 36px rgba(37,99,235,.10);
+}
+.card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.card-title { color: #0B2A5B; font-weight: 700; font-size: .95rem; margin-bottom: 6px; }
+.card-head .card-title { margin: 0; }
+.count-pill { background: #E6EEFF; color: #2563EB; font-size: .68rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+.about { color: #3D5280; font-size: .9rem; line-height: 1.7; margin: 0; }
+
+/* Form */
+[data-testid="stForm"] label p { font-weight: 600; color: #0B2A5B; font-size: .78rem; }
+div[data-baseweb="input"], div[data-baseweb="base-input"] { border-radius: 10px; background: #fff; }
+div[data-baseweb="input"] { border: 1px solid #DCE7FA; }
+[data-testid="stFormSubmitButton"] button {
+    width: 100%; background: linear-gradient(90deg,#2563EB,#3B82F6); border: none; border-radius: 12px;
+    padding: .75rem 1rem; box-shadow: 0 8px 20px rgba(37,99,235,.35); transition: transform .2s, box-shadow .2s;
+}
+[data-testid="stFormSubmitButton"] button p { color: #fff; font-weight: 600; }
+[data-testid="stFormSubmitButton"] button:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37,99,235,.45); }
+
+/* Kartu status */
+.status-card { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.92); border: 1px solid #E1ECFC; border-radius: 16px; padding: 16px 18px; margin-bottom: 18px; box-shadow: 0 10px 28px rgba(37,99,235,.08); animation: naik .5s ease; }
+.status-card.card-ok { background: #EAF2FF; border-color: #BFD6FA; }
+.status-card.card-bad { background: #FFF1F1; border-color: #F7CACA; }
+.status-icon { width: 38px; height: 38px; flex: none; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.icon-wait { background: #E6EEFF; color: #2563EB; letter-spacing: 1px; }
+.icon-ok { background: #16A34A; color: #fff; }
+.icon-bad { background: #DC2626; color: #fff; }
+.status-title { color: #0B2A5B; font-weight: 700; font-size: .92rem; }
+.status-sub { color: #6B7FA3; font-size: .74rem; margin-top: 2px; }
+
+/* Tabel */
+.tabel { width: 100%; border-collapse: collapse; font-size: .78rem; }
+.tabel thead tr { background: #EEF4FF; }
+.tabel th { text-align: left; color: #6B7FA3; font-weight: 600; padding: 8px 12px; font-size: .72rem; }
+.tabel td { padding: 11px 12px; color: #0B2A5B; border-bottom: 1px solid #EEF3FC; }
+.tabel tbody tr:first-child td { background: #F3F8FF; }
+.tabel .kosong { text-align: center; color: #6B7FA3; padding: 22px; }
+.badge { font-size: .68rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.badge-lulus { background: #DCFCE7; color: #15803D; }
+.badge-tidak { background: #FEE2E2; color: #DC2626; }
+
+/* Penyesuaian detail sesuai mockup hi-res */
+.stApp::before, .stApp::after { content: ""; position: fixed; border: 1px solid rgba(96,165,250,.35); border-radius: 50%; pointer-events: none; z-index: 0; }
+.stApp::before { width: 420px; height: 420px; top: -150px; right: 4%; }
+.stApp::after { width: 520px; height: 520px; bottom: -330px; left: -200px; }
+.status-card:not(.card-ok):not(.card-bad) .status-title { color: #4A6190; font-weight: 600; }
+[data-testid="stNumberInputStepUp"], [data-testid="stNumberInputStepDown"] { display: none; }
+div[data-baseweb="input"]:has(input:not(:placeholder-shown)), div[data-baseweb="base-input"]:has(input:not(:placeholder-shown)) { background: #EAF2FF; }
+div[data-baseweb="input"]:has(input:not(:placeholder-shown)) { border-color: #BFD6FA; }
+div[data-baseweb="input"] input { background: transparent; }
+
+/* Perapihan menu, tombol, dan judul */
+label[data-baseweb="radio"] > div:first-child { display: none !important; }
+div[data-testid="stRadio"] [role="radiogroup"] { width: fit-content; margin-left: auto; flex-wrap: nowrap; }
+[data-testid="stFormSubmitButton"], [data-testid="stFormSubmitButton"] button { width: 100%; }
+.hero-title { font-size: 2.1rem; white-space: nowrap; }
+
+/* Selektor sesuai struktur Streamlit terbaru */
+label[data-testid="stRadioOption"] > div > div:first-child { display: none !important; }
+label[data-testid="stRadioOption"] { padding: 4px 16px; border-radius: 999px; cursor: pointer; }
+label[data-testid="stRadioOption"] p { font-size: .78rem; color: #0B2A5B; font-weight: 500; }
+label[data-testid="stRadioOption"][data-selected="true"] { background: #2563EB; }
+label[data-testid="stRadioOption"][data-selected="true"] p { color: #fff; }
+div[data-testid="stRadioGroup"] { background: #fff; border: 1px solid #D6E4FB; border-radius: 999px; padding: 4px; gap: 2px; width: fit-content; margin-left: auto; box-shadow: 0 4px 14px rgba(37,99,235,.08); }
+div[data-testid="stFormSubmitButton"], div[data-testid="stFormSubmitButton"] > button { width: 100% !important; }
+.hero-title { font-size: 1.95rem; white-space: normal; }
+
+/* Lebar pembungkus */
+div:has(> div[data-testid="stFormSubmitButton"]), div:has(> div[data-testid="stRadio"]) { width: 100% !important; }
+div[data-testid="stFormSubmitButton"] { display: block; }
+div[data-testid="stRadio"] { width: 100%; display: flex; justify-content: flex-end; }
+.hero-title { font-size: 1.7rem; }
+
+/* Override aturan bawaan Streamlit */
+div[data-testid="stElementContainer"]:has(div[data-testid="stFormSubmitButton"]),
+div[data-testid="stElementContainer"]:has(div[data-testid="stFormSubmitButton"]) > div,
+div[data-testid="stFormSubmitButton"], div[data-testid="stFormSubmitButton"] > button { width: 100% !important; }
+h1.hero-title { font-size: 1.9rem !important; line-height: 1.2 !important; padding: 0 !important; }
+
+/* Input kosong putih, terisi biru muda; jarak judul */
+div[data-baseweb="input"], div[data-baseweb="base-input"] { background: #FFFFFF !important; }
+div[data-baseweb="input"]:has(input:not(:placeholder-shown)), div[data-baseweb="input"]:has(input:not(:placeholder-shown)) div[data-baseweb="base-input"] { background: #EAF2FF !important; }
+h1.hero-title { margin: 14px 0 10px !important; }
